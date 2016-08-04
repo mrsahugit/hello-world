@@ -20,7 +20,7 @@ apply plugin: 'cobertura'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
 
-war {
+jar {
     baseName = 'hello-world'
     version =  '0.1.0'
 }
