@@ -12,6 +12,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
@@ -19,7 +20,7 @@ apply plugin: 'cobertura'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
 
-jar {
+war {
     baseName = 'hello-world'
     version =  '0.1.0'
 }
