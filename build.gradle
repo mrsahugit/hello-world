@@ -4,6 +4,10 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
+        classpath("org.springframework:springloaded:1.2.3.RELEASE")
+        
+        classpath "net.saliman:gradle-cobertura-plugin:2.3.2"
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3"
     }
 }
 
@@ -11,8 +15,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'cobertura'
 apply plugin: 'jacoco'
-// apply plugin: 'coveralls'
+apply plugin: 'coveralls'
 
 jar {
     baseName = 'hello-world'
