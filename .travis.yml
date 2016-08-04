@@ -1,9 +1,14 @@
 language: java
 jdk:
 - oraclejdk8
-
 env:
 - TERM=dumb
-
 after_success:
 - gradle jacocoTestReport coveralls
+deploy:
+  provider: heroku
+  api_key:
+    secure: OY4qThTok8Ibu58iP+4AMUoMO98JLbG/p9tC+FIaw7rOu5FeQ+4LP7TuO7y+BNwDy09mbzl8W665La5j4kfSs1yioGDYH3r/4vUPpKr+IkkkZeTc2XOKVnXyP81Qx5r3Rbjk8I8V17DJmDdA8II1cknQ8XQcnq81gtGRGfh+hP5TjNmeMVw4kYpv/+zeq+IamRN+ygBTMUy1Rr0mJyNLPQ/8bYtAibIrjqsNp4hVwTw65/sx1ponbUcJxLT7zMWU8ZFpZ3H9Zt9J0LPCiNJIEtp/oTfgVdFuFkeUtnriNEQQhYPUT6nWxgT5dDQKI/9zISP1LsWV3b07EDBvpLTYlsQdPBwajptB0I1PLWQDASYYDL76x5rX1hOMTU2ZPt9FG6OXPAPF4briPQeMMcZTL+SOhBoxyCI8y7S1EJE+vxLdfyIHuGYysTmzBiDut9GQ9A/mupTYPbe0BjFWNCI+ZpfYasJASSB35J5s+s/G2VJwESMmeu/g6P7Z2V1Kllmt5jWdum9vbmQxJEfioxtjN/f8/taT9G6P3MfO01aTw+Oc4cK2aDRFF5xIpvcD3Z5z81zgIRQZdw8H7rHPrhXiJjH/DI3nOgckaOTCSDqn6uk7fXnXBPUYJ1sS8pjo/UmCqK5nhbuMtVqvxRY8hu0P6b+wlH46gdb/xTAzTtKwMEU=
+  app: hello-world
+  on:
+    repo: mrsahugit/hello-world
