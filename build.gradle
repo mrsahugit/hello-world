@@ -17,7 +17,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'cobertura'
 apply plugin: 'jacoco'
-apply plugin: 'coveralls'
+apply plugin: 'com.github.kt3k.coveralls'
 
 jar {
     baseName = 'hello-world'
