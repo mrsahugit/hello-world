@@ -12,7 +12,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'jacoco'
-apply plugin: 'coveralls'
+// apply plugin: 'coveralls'
 
 jar {
     baseName = 'hello-world'
